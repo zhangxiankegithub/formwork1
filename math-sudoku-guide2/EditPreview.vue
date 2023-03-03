@@ -2,7 +2,7 @@
     <div class="container">
         <div class="canvas" ref="canvas"></div>
         <EditGameCustom :allData="allData" v-if="documentStatus"></EditGameCustom>
-        <!-- <img src="common/images/logo.png" class="logo" id="logo"/> -->
+        <img src="common/images/logo.png" class="logo" id="logo"/>
     </div>
 </template>
 <script>
@@ -92,44 +92,44 @@
                             container[index].style.height = ((window.innerWidth - 340)*(((!window.screenRatio?10.8:14.4)/19.2)))+'px'
                         }
                     }
-                    window.Refreshfunction = function(){
+                    window.shuaxinshuaxin = function(){
+                        store.state.pageNumber
+                        // for (let iii = 0; iii < self.allData.sources.length; iii++) {
+                        //     if(window.stage.getChildByName('GAME').getChildByName('GAME'+iii).getChildByName('componentContainer').getChildByName('game22')){
+                        //         window.stage.getChildByName('GAME').getChildByName('GAME'+iii).getChildByName('componentContainer').removeChild(window.stage.getChildByName('GAME').getChildByName('GAME'+iii).getChildByName('componentContainer').getChildByName('game22'))
+                        //     }
+                        //     let game2 = new PIXI.Container();
+                        //     game2.name="game22"
+                        //     window.stage.getChildByName('GAME').getChildByName('GAME'+iii).getChildByName('componentContainer').addChild(game2);
+                        //     let LENGHT = parseFloat(self.allData.sources[iii].displaycontrol[0].style)
+                        //     for (let i = 0; i < Math.pow(LENGHT,2); i++) {
+                        //         let numberBtn = new Sprite.fromImage(res[self.allData.sources[iii].square.NAME[0].name].url);
+                        //         numberBtn.anchor.set(.5,.5);
+                        //         numberBtn.width = parseFloat(self.allData.sources[iii].square.width);
+                        //         numberBtn.height = parseFloat(self.allData.sources[iii].square.height);
+                        //         numberBtn.x= parseFloat(self.allData.sources[iii].square.x)+parseFloat(self.allData.sources[iii].square.width)/2+(parseFloat(self.allData.sources[iii].ranks.width)+parseFloat(self.allData.sources[iii].square.width))*(i%LENGHT)
+                        //         numberBtn.y= parseFloat(self.allData.sources[iii].square.y)+parseFloat(self.allData.sources[iii].square.height)/2+(parseFloat(self.allData.sources[iii].ranks.height)+parseFloat(self.allData.sources[iii].square.height))*parseInt(i/LENGHT)
+                        //         game2.addChild(numberBtn)
+                        //     }    
+                        // }
                         if(window.stage.getChildByName('GAME').getChildByName('GAME'+store.state.pageNumber).getChildByName('componentContainer').getChildByName('game22')){
                             window.stage.getChildByName('GAME').getChildByName('GAME'+store.state.pageNumber).getChildByName('componentContainer').removeChild(window.stage.getChildByName('GAME').getChildByName('GAME'+store.state.pageNumber).getChildByName('componentContainer').getChildByName('game22'))
                         }
                         let game2 = new PIXI.Container();
                         game2.name="game22"
                         window.stage.getChildByName('GAME').getChildByName('GAME'+store.state.pageNumber).getChildByName('componentContainer').addChild(game2);
-                        let numbersarray=[]
-                        for (let i=0;i<parseInt(self.allData.sources[store.state.pageNumber].ranks.Rows)*parseInt(self.allData.sources[store.state.pageNumber].ranks.column);i++){
-                            numbersarray[i]=i+parseInt(self.allData.sources[store.state.pageNumber].ranks.start);
-                        }
-                        numbersarray.sort(function(){ return 0.5 - Math.random()});
-                        //添加元素
-                        for (let i = 0; i < parseInt(self.allData.sources[store.state.pageNumber].ranks.Rows)*parseInt(self.allData.sources[store.state.pageNumber].ranks.column); i++) {
-                            let element = new Sprite.fromImage(res[self.allData.sources[store.state.pageNumber].element.name].url);
-                            element.INDEX = numbersarray[i]
-                            element.anchor.set(.5,.5);
-                            element.width = parseFloat(self.allData.sources[store.state.pageNumber].element.width);
-                            element.height = parseFloat(self.allData.sources[store.state.pageNumber].element.height);
-                            element.x= 960-parseFloat(self.allData.sources[store.state.pageNumber].element.width)*parseInt(self.allData.sources[store.state.pageNumber].ranks.Rows)/2+parseFloat(self.allData.sources[store.state.pageNumber].element.width)/2+(parseFloat(self.allData.sources[store.state.pageNumber].element.width))*(i%parseInt(self.allData.sources[store.state.pageNumber].ranks.Rows))
-                            element.y= 540-parseFloat(self.allData.sources[store.state.pageNumber].element.height)*parseInt(self.allData.sources[store.state.pageNumber].ranks.column)/2+parseFloat(self.allData.sources[store.state.pageNumber].element.height)/2+(parseFloat(self.allData.sources[store.state.pageNumber].element.height))*parseInt(i/parseInt(self.allData.sources[store.state.pageNumber].ranks.Rows))
-                            element.interactive=false
-                            element.buttonMode=true
-                            game2.addChild(element)
-                            
-                            let number = new PIXI.Text(numbersarray[i])
-                            number.anchor.set(0.5,0.5)
-                            number.x=element.x
-                            number.y=element.y
-                            number.style.fontSize=parseInt(self.allData.sources[store.state.pageNumber].ranks.FontSize)
-                            number.style.fontFamily=self.allData.sources[store.state.pageNumber].ranks.FontFamily
-                            number.style.fontWeight=self.allData.sources[store.state.pageNumber].ranks.strong?'bold':""
-                            number.style.fill=self.allData.sources[store.state.pageNumber].ranks.defaultcolor?self.allData.sources[store.state.pageNumber].ranks.defaultcolor:"#FFFFFF"
-                            number.interactive=false
-                            game2.addChild(number)
-                        }      
+                        let LENGHT = parseFloat(self.allData.sources[store.state.pageNumber].displaycontrol[0].style)
+                        for (let i = 0; i < Math.pow(LENGHT,2); i++) {
+                            let numberBtn = new Sprite.fromImage(res[self.allData.sources[store.state.pageNumber].square.NAME[0].name].url);
+                            numberBtn.anchor.set(.5,.5);
+                            numberBtn.width = parseFloat(self.allData.sources[store.state.pageNumber].square.width);
+                            numberBtn.height = parseFloat(self.allData.sources[store.state.pageNumber].square.height);
+                            numberBtn.x= parseFloat(self.allData.sources[store.state.pageNumber].square.x)+parseFloat(self.allData.sources[store.state.pageNumber].square.width)/2+(parseFloat(self.allData.sources[store.state.pageNumber].ranks.width)+parseFloat(self.allData.sources[store.state.pageNumber].square.width))*(i%LENGHT)
+                            numberBtn.y= parseFloat(self.allData.sources[store.state.pageNumber].square.y)+parseFloat(self.allData.sources[store.state.pageNumber].square.height)/2+(parseFloat(self.allData.sources[store.state.pageNumber].ranks.height)+parseFloat(self.allData.sources[store.state.pageNumber].square.height))*parseInt(i/LENGHT)
+                            game2.addChild(numberBtn)
+                        }    
                     }
-                    window.Refreshfunction()
+                    window.shuaxinshuaxin();
                 });
             })
         }

@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="canvas" ref="canvas"></div>
-        <!-- <img src="common/images/logo.png" class="logo" id="logo"/> -->
+        <img src="common/images/logo.png" class="logo" id="logo"/>
     </div>
 </template>
 
