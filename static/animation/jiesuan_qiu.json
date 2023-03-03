@@ -1,0 +1,156 @@
+{
+"skeleton": { "hash": "TD5kl2LGg/8h+5xUhQ8wvgd3qlo", "spine": "3.7.92", "width": 1900, "height": 248, "images": "./stuffs/", "audio": "D:/yuanwenjian/2019shuqi/feiyuetaikong/jiesuan_qiu/stuffs" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "win", "parent": "root", "x": 1002.9, "y": -1017.12 }
+],
+"slots": [
+	{ "name": "win", "bone": "win", "attachment": "kose" }
+],
+"skins": {
+	"default": {
+		"win": {
+			"kose": { "x": -31.9, "y": 60.12, "width": 1900, "height": 248 },
+			"win": { "x": -4.9, "y": 72.12, "width": 1846, "height": 272 }
+		}
+	}
+},
+"animations": {
+	"lose_idle": {
+		"slots": {
+			"win": {
+				"attachment": [
+					{ "time": 0, "name": "kose" }
+				]
+			}
+		},
+		"bones": {
+			"win": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": -11.48 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"lose_in": {
+		"slots": {
+			"win": {
+				"attachment": [
+					{ "time": 0, "name": "kose" }
+				]
+			}
+		},
+		"bones": {
+			"win": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6667, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": -304.33,
+						"curve": [ 0.02, 0.45, 0.75, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"x": 0,
+						"y": -28.71,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1, "x": 0, "y": -11.48 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"win_idle": {
+		"slots": {
+			"win": {
+				"attachment": [
+					{ "time": 0, "name": "win" }
+				]
+			}
+		},
+		"bones": {
+			"win": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": -11.48 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"win_in": {
+		"slots": {
+			"win": {
+				"attachment": [
+					{ "time": 0, "name": "win" }
+				]
+			}
+		},
+		"bones": {
+			"win": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6667, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": -304.33,
+						"curve": [ 0.02, 0.45, 0.75, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"x": 0,
+						"y": -28.71,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1, "x": 0, "y": -11.48 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

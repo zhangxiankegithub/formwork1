@@ -1,0 +1,20 @@
+
+jiesuan_qiu.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kose
+  rotate: false
+  xy: 2, 276
+  size: 1900, 248
+  orig: 1900, 248
+  offset: 0, 0
+  index: -1
+win
+  rotate: false
+  xy: 2, 2
+  size: 1846, 272
+  orig: 1846, 272
+  offset: 0, 0
+  index: -1
