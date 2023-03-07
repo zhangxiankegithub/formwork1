@@ -3907,6 +3907,7 @@
 	],
 	"assets": [
 		"index.html",
+		"index.jxp",
 		"node_modules\\accepts\\HISTORY.md",
 		"node_modules\\accepts\\LICENSE",
 		"node_modules\\accepts\\node_modules\\mime-types\\HISTORY.md",
