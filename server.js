@@ -3,7 +3,7 @@ var fs = require('fs');
 var app = express();
 var json
 
-app.get('', function (req, res) {
+app.get('/', function (req, res) {
   // 输出 JSON 格式
   // console.log(req,123456)
   fs.readFile('text.txt', function (err, data) {

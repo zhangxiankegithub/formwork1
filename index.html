@@ -1,5 +1,6 @@
 <html>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <button id="button1">点击</button>
     <span id="number"></span>
 </body>
@@ -7,23 +8,8 @@
     let button1 = document.getElementById("button1")
     let number = document.getElementById("number")
     window.onload = function(){
-        var xmlhttp;
-        if (window.XMLHttpRequest){
-            //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-            xmlhttp=new XMLHttpRequest();
-        }else{
-            // IE6, IE5 浏览器执行代码
-            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange=function(){
-            if (xmlhttp.readyState==4 && xmlhttp.status==200)
-            {
-                number.innerHTML=parseInt(xmlhttp.responseText);
-            }
-        }
-        xmlhttp.open("GET","https://zhangxiankegithub.github.io/formwork1/",true);
-        xmlhttp.send();
-
+        console.log(axios,132456)
+        axios({url:"https://github.com/zhangxiankegithub/formwork1/",method:"GET"})
     }
 </script>
 </html>
