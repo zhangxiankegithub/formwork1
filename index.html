@@ -9,7 +9,9 @@
     let number = document.getElementById("number")
     window.onload = function(){
         console.log(axios,132456)
-        axios({url:"https://github.com/zhangxiankegithub/formwork1/",method:"GET"})
+        axios({url:"https://github.com/zhangxiankegithub/formwork1/",method:"GET"}).then(value=>{
+            number.innerHTML=value
+        })
     }
 </script>
 </html>
