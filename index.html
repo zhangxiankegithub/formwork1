@@ -1,17 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <button id="button1">点击</button>
-    <span id="number"></span>
+    <span id="number">10</span>
+    <script>
+       
+        window.onload = function(){
+            $("#number").html(10)
+            $.ajax({
+                url:'https://zhangxiankegithub.github.io/formwork1/',
+                type:'get',
+                success:function(res){
+                    $("#number").html(res)
+                }
+            })
+        }
+    </script>
+    
 </body>
-<script>
-    let button1 = document.getElementById("button1")
-    let number = document.getElementById("number")
-    window.onload = function(){
-        console.log(axios,132456)
-        axios({url:"https://github.com/zhangxiankegithub/formwork1/",method:"GET"}).then(value=>{
-            number.innerHTML=value
-        })
-    }
-</script>
 </html>
