@@ -8,21 +8,31 @@
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 </head>
 <body>
-    <button id="button1">点击</button>
-    <span id="number">10</span>
+    <span id="text">访问量</span>
+    <span id="number"></span>
     <script>
-       
-        window.onload = function(){
-            $("#number").html(10)
-            $.ajax({
-                url:'https://zhangxiankegithub.github.io/formwork1/',
-                type:'get',
-                success:function(res){
-                    $("#number").html(res)
-                }
-            })
-        }
+        // //jsonp调用方法
+        // const a = (data)=>{
+        //     $("#number").html(JSON.parse(data).one);
+        // }
+        $.ajax({
+            url:'http://192.168.3.18:8080/',
+            type:'get',
+            // data:{
+            //     "one":"1",
+            //     "two":"2"
+            // },
+            // dataType:'jsonp',
+            async:true,
+            success:function(data){
+                $("#number").html(JSON.parse(data).one)
+                console.log("成功")
+            },
+            error:function(data){
+                console.log("失败")
+            },
+        });
     </script>
-    
+    <!-- <script src="http://localhost:8080/?callback=a"></script> -->
 </body>
 </html>
